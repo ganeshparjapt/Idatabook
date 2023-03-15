@@ -6,10 +6,11 @@ const router = express.Router();
 
 //creat a user using : POST "/api/auth/"
 
-router.post('/',(req,res)=>{
+router.get('/',(req,res)=>{
   console.log(req.body);
-  const user = User(req.body);
-  user.save()
-  res.send(req.body);
+  const user =User(req.body);
+  user.save();
+  res.send(req.body)
+
 })
 module.exports = router
